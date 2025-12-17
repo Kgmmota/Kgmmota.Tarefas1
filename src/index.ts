@@ -49,7 +49,7 @@ function listarTarefas(){
 
         textSpan.onclick = () => alternarTarefa(posicao);
 
-        // Criar botão excluir
+
         let linkElement = document.createElement("a");
         linkElement.setAttribute("href", "#");
         
