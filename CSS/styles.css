@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #020024, #090979, #2c003e, #00d4ff);
+    background-size: 400% 400%;
+    animation: moverFundo 15s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+@keyframes moverFundo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    background: rgb(57, 4, 74);
+    width: 100%;
+    max-width: 500px; 
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(28, 27, 27, 0.1); 
+    display: flex;
+    flex-direction: column;
+}
+
+
+#app {
+    background: rgb(57, 4, 74);
+    width: 100%;
+    max-width: 500px; 
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px; 
+    border-top: 1px solid #414040;
+    padding-top: 20px;
+}
+
+#taskInput {
+    flex: 1; 
+    padding: 12px 15px;
+    border: 2px solid #737171;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    border-color: rgba(170, 168, 171, 0.9); 
+}
+
+#addTaskButton {
+    background-color: rgba(93, 4, 138, 0.9);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTaskButton:hover {
+    background-color: rgba(64, 3, 95, 0.9);
+}
+
+
+ul {
+    list-style: none;
+    width: 100%;
+    max-height: 400px; 
+    overflow-y: auto;  
+}
+
+li {
+    background-color: #f1f1ed;
+    border-bottom: 1px solid #000000;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #fafafa;
+}
+
+li span {
+    flex-grow: 1;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #444;
+    margin-right: 15px;
+    word-break: break-all; 
+    user-select: none; 
+}
+
+
+li span.concluida {
+    text-decoration: line-through;
+    color: #fafafa; 
+    font-style: italic;
+}
+
+li a {
+    text-decoration: none;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+li a:hover {
+    background-color: #ee5253;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    
+    background-color: rgba(52, 7, 78, 0.9); 
+    
+    border-top: 2px solid #000000; 
+    
+    color: #ffffff;
+    font-size: 1rem;
+    z-index: 100;
+}
+
+.copyrights {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.filter-header select {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+
+.input-area {
+    gap: 8px; 
+}
+
+
+#categoryInput {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background-color: rgb(93, 4, 138, 0.9);
+    cursor: pointer;
+}
+
+
+.badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-right: 12px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0; 
+}
+
+.badge.Trabalho { background-color: #040074; } 
+.badge.Estudos  { background-color: #7f319d; } 
+.badge.Pessoal  { background-color: #02612a; } 
+.badge.Geral    { background-color: #95a5a6; } 
+
+
+.texto-tarefa {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+
+footer {
+    margin-top: 30px;
+    color: #a4a4a4; 
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

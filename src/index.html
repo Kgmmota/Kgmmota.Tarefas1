@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas</title>
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+
+    <div id="app">
+        
+        <div class="filter-header">
+            <span>Filtrar:</span>
+            <select id="filterSelect">
+                <option value="todas">Todas</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Estudos">Estudos</option>
+                <option value="Pessoal">Pessoal</option>
+            </select>
+        </div>
+
+        <ul></ul>
+
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa">
+            
+            <select id="categoryInput">
+                <option value="Pessoal">Pessoal</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Estudos">Estudos</option>
+            </select>
+
+            <button id="addTaskButton">Adicionar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copyrights">&copy; Guilherme Mota</div>
+    </footer>
+
+    <script src="./../build/index.js"></script>
+</body>
+</html>
